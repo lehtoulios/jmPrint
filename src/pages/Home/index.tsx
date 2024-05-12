@@ -9,7 +9,7 @@ import TumbUp from "../../assets/tumbUp.png";
 import Excellence from "../../assets/Excellence.png";
 import Happy from "../../assets/happy.png";
 import DeliveryVan from "../../assets/car.svg";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import Mockup from "../../assets/Mockup.svg";
