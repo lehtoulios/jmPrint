@@ -79,6 +79,7 @@ export const Carrousel = ({ dataImage }: ImageSlidreProps) => {
           return (
             <S.Contador
               key={index.toString()}
+              // @ts-ignore
               selecionado={selecionado}
               onClick={() => setImageIndex(index)}
             ></S.Contador>
