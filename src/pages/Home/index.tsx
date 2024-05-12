@@ -37,11 +37,19 @@ import { dataImage, cardImage, portfolioImage } from "../../utils/imageArray";
 export const Home = () => {
   const desktop = useMedia("(min-width: 750px)");
   const [showNav, setSwoNav] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const form = useRef();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+    setName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
     emailjs
       // @ts-ignore
       .sendForm("service_2a3dtuo", "template_oz0qyo5", form.current, {
@@ -286,13 +294,33 @@ export const Home = () => {
           <S.GetInTouchText>
             Please do not hesitate to send us a message
           </S.GetInTouchText>
-          {/* EmailJs was used limit 200 emails if needed you can pay to get more !uxX#?gh#+T7hsm */}
+          {/* EmailJs was used limit 200 emails if needed you can subscribe to get more */}
           {/* @ts-ignore */}
           <S.GetInTouchForm onSubmit={sendEmail} ref={form}>
-            <S.GetInTouchInput placeholder="Name" name="user_name" />
-            <S.GetInTouchInput placeholder="Email" name="user_email" />
-            <S.GetInTouchInput placeholder="Phone" name="user_cell" />
-            <S.GetInTouchTextArea placeholder="Message" name="message" />
+            <S.GetInTouchInput
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Name"
+              name="to_name"
+            />
+            <S.GetInTouchInput
+              value={email}
+              placeholder="Email"
+              name="from_name"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <S.GetInTouchInput
+              value={phone}
+              placeholder="Phone"
+              name="from_cell"
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <S.GetInTouchTextArea
+              value={message}
+              placeholder="Message"
+              name="message"
+              onChange={(e) => setMessage(e.target.value)}
+            />
             <S.BtnForm type="submit" value="Send" />
           </S.GetInTouchForm>
           <S.GetInTouchCardLine />
