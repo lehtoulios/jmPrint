@@ -250,7 +250,7 @@ export const WeDeliverImgContainer = styled.div`
 export const vanImg = styled.img`
   width: 45vw;
   max-width: 650px;
-  min-width: 200px;
+  min-width: 300px;
   margin-bottom: 90px;
   @media (min-width: 600px) {
     margin-bottom: 0;
@@ -259,7 +259,7 @@ export const vanImg = styled.img`
 
 export const boxImg = styled.img`
   width: 45vw;
-  min-width: 170px;
+  min-width: 100px;
   max-width: 400px;
   margin-top: 130px;
   margin-left: -70px;
@@ -454,7 +454,7 @@ export const AboutContainer = styled.div`
 
 export const AboutImgContainer = styled.div`
   display: flex;
-  padding: 40px;
+  padding: 10px 40px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -489,7 +489,7 @@ export const AboutTextHeader = styled.h3`
   margin-bottom: auto;
   padding: 10px 20px;
   border-radius: 30px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   font-size: 24px;
   z-index: 2;
   &:before {
