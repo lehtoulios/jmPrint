@@ -178,7 +178,7 @@ export const CardServicesText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -15px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -189,7 +189,7 @@ export const CardServicesText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -25px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -341,7 +341,7 @@ export const WhyChooseText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -15px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -352,7 +352,7 @@ export const WhyChooseText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -25px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -410,7 +410,7 @@ export const PortifolioText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -15px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -421,7 +421,7 @@ export const PortifolioText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -25px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -496,8 +496,8 @@ export const AboutTextHeader = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -15px;
-    top: 5px;
+    left: -5px;
+    top: 20px;
     width: 40px;
     height: 8px;
     background-color: #17ff00;
@@ -507,8 +507,8 @@ export const AboutTextHeader = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -25px;
-    top: 5px;
+    left: 5px;
+    top: 20px;
     width: 40px;
     height: 8px;
     background-color: #31b224;
@@ -594,7 +594,7 @@ export const GetInTouchHeaderText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -15px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -605,13 +605,14 @@ export const GetInTouchHeaderText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -25px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
     background-color: #31b224;
     z-index: -1;
   }
+
   @media (min-width: 600px) {
     &:after {
       content: "";
