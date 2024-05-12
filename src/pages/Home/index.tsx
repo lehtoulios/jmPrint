@@ -297,10 +297,13 @@ export const Home = () => {
           </S.GetInTouchForm>
           <S.GetInTouchCardLine />
           <S.SocialContainer>
-            <S.SocialBtn>
+            <S.SocialBtn href="https://wa.me/3530874317979" target="_blanck">
               <S.SocialImg src={WhatsIcon} />
             </S.SocialBtn>
-            <S.SocialBtn>
+            <S.SocialBtn
+              href="https://www.instagram.com/jmprintesign/"
+              target="_blanck"
+            >
               <S.SocialImg src={InstaIcon} />
             </S.SocialBtn>
           </S.SocialContainer>

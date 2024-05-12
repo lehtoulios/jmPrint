@@ -166,7 +166,7 @@ export const CarrocelImg = styled.div``;
 export const SliderCardImgContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_ABOUT};
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 20px 0px;
 `;
 
 export const CardServicesText = styled.h3`
@@ -178,8 +178,8 @@ export const CardServicesText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -10px;
-    top: 7px;
+    left: -15px;
+    top: 5px;
     width: 40px;
     height: 8px;
     background-color: #17ff00;
@@ -189,8 +189,8 @@ export const CardServicesText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -20px;
-    top: 7px;
+    left: -25px;
+    top: 5px;
     width: 40px;
     height: 8px;
     background-color: #31b224;
@@ -333,6 +333,7 @@ export const WhyChooseCardContainer = styled.div`
 `;
 
 export const WhyChooseText = styled.h3`
+  font-size: 24px;
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
   position: relative;
   z-index: 2;
@@ -340,7 +341,7 @@ export const WhyChooseText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -10px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -351,7 +352,7 @@ export const WhyChooseText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -20px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -404,11 +405,12 @@ export const PortifolioText = styled.h3`
   z-index: 2;
   margin-bottom: 18px;
   margin-right: auto;
+  font-size: 24px;
   &:before {
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -10px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -419,7 +421,7 @@ export const PortifolioText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -20px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -488,13 +490,14 @@ export const AboutTextHeader = styled.h3`
   padding: 10px 20px;
   border-radius: 30px;
   background: rgba(0, 0, 0, 0.6);
+  font-size: 24px;
   z-index: 2;
   &:before {
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: 10px;
-    top: 15px;
+    left: -15px;
+    top: 5px;
     width: 40px;
     height: 8px;
     background-color: #17ff00;
@@ -504,8 +507,8 @@ export const AboutTextHeader = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: 0px;
-    top: 15px;
+    left: -25px;
+    top: 5px;
     width: 40px;
     height: 8px;
     background-color: #31b224;
@@ -584,12 +587,14 @@ export const GetInTouchHeaderText = styled.h3`
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
   position: relative;
   z-index: 2;
-  margin: 10px auto 10px 0;
+  font-size: 20px;
+  margin: 10px auto 20px 10px;
+  font-size: 24px;
   &:before {
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -10px;
+    left: -15px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -600,7 +605,7 @@ export const GetInTouchHeaderText = styled.h3`
     content: "";
     position: absolute;
     transform: rotate(125deg);
-    left: -20px;
+    left: -25px;
     top: 5px;
     width: 40px;
     height: 8px;
@@ -708,8 +713,14 @@ export const BtnForm = styled.input`
 `;
 export const SocialContainer = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 35px;
   margin-top: 20px;
 `;
-export const SocialBtn = styled.a``;
-export const SocialImg = styled.img``;
+export const SocialBtn = styled.a`
+  width: 35px;
+  height: 35px;
+`;
+export const SocialImg = styled.img`
+  width: 35px;
+  height: 35px;
+`;
