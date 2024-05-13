@@ -9,7 +9,7 @@ import TumbUp from "../../assets/tumbUp.png";
 import Excellence from "../../assets/Excellence.png";
 import Happy from "../../assets/happy.png";
 import DeliveryVan from "../../assets/car.svg";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import Mockup from "../../assets/Mockup.svg";
@@ -27,7 +27,7 @@ import Button from "../../components/Button";
 import { Carrousel } from "../../components/Carrousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
