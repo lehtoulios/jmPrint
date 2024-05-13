@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import background from "../../assets/BrickBackground.png";
 import backgroundJm from "../../assets/jml_brazilian.png";
 import vanBackground from "../../assets/vanBranca.png";
+import { Link } from "react-scroll";
 
 export const MainContainer = styled.section`
   display: flex;
@@ -17,6 +18,24 @@ export const MainContainer = styled.section`
 export const Container = styled.div`
   width: 100%;
   max-width: 1440px;
+`;
+
+export const AnimatedLink = styled(Link)`
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    transition: width 300ms ease-in-out;
+  }
+  &:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: ${({ theme }) => theme.COLORS.GREEN};
+  }
 `;
 
 export const NavBar = styled.nav`
@@ -167,6 +186,9 @@ export const SliderCardImgContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_ABOUT};
   width: 100%;
   padding: 50px 20px 0px;
+  @media (min-width: 750px) {
+    padding: 50px 50px 0px;
+  }
 `;
 
 export const CardServicesText = styled.h3`
@@ -393,6 +415,9 @@ export const PortifolioContainer = styled.div`
   justify-content: center;
   padding: 30px;
   background-color: ${({ theme }) => theme.COLORS.COLOR_MENU};
+  @media (min-width: 750px) {
+    padding: 50px 50px 0px;
+  }
 `;
 
 export const PortifolioCarrocelImgContainer = styled.div``;
@@ -581,6 +606,9 @@ export const GetInTouchContainer = styled.div`
   justify-content: start;
   align-items: center;
   padding: 30px;
+  @media (min-width: 750px) {
+    padding: 50px;
+  }
 `;
 
 export const GetInTouchHeaderText = styled.h3`

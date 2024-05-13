@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import arrow1 from "../../assets/arrow1.svg";
 import arrow2 from "../../assets/arrow2.svg";
 
@@ -15,19 +15,40 @@ type ImageSlidreProps = {
 
 export const Carrousel = ({ dataImage }: ImageSlidreProps) => {
   const [imageIndex, setImageIndex] = useState(0);
+  const [buffer, setBuffer] = useState(false);
 
   function shoNextImagge() {
+    setBuffer(true);
+    setInterval(() => {
+      setBuffer(false);
+    }, 5000);
     setImageIndex((index: any) => {
       if (index === dataImage.length - 1) return 0;
       return index + 1;
     });
   }
   function shoPrevImagge() {
+    setBuffer(true);
+    setInterval(() => {
+      setBuffer(false);
+    }, 5000);
     setImageIndex((index: any) => {
       if (index === 0) return dataImage.length - 1;
       return index - 1;
     });
   }
+
+  useEffect(() => {
+    if (!buffer) {
+      const customInterval = setInterval(() => {
+        setImageIndex((index: any) => {
+          if (index === dataImage.length - 1) return 0;
+          return index + 1;
+        });
+      }, 5000);
+      return () => clearInterval(customInterval);
+    }
+  }, [imageIndex, buffer]);
 
   return (
     <S.Container>

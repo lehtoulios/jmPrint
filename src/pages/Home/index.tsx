@@ -9,7 +9,7 @@ import TumbUp from "../../assets/tumbUp.png";
 import Excellence from "../../assets/Excellence.png";
 import Happy from "../../assets/happy.png";
 import DeliveryVan from "../../assets/car.svg";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import Mockup from "../../assets/Mockup.svg";
@@ -78,38 +78,38 @@ export const Home = () => {
           <S.LogoImage src={logo} />
           {desktop ? (
             <S.DeskNavBar>
-              <Link
+              <S.AnimatedLink
                 to="services"
                 spy={true}
                 smooth={true}
                 onClick={() => handleNavigation(event as Event)}
               >
                 <li>Services</li>
-              </Link>
-              <Link
+              </S.AnimatedLink>
+              <S.AnimatedLink
                 to="portifolio"
                 spy={true}
                 smooth={true}
                 onClick={() => handleNavigation(event as Event)}
               >
                 <li>Portfolio</li>
-              </Link>
-              <Link
+              </S.AnimatedLink>
+              <S.AnimatedLink
                 to="about"
                 spy={true}
                 smooth={true}
                 onClick={() => handleNavigation(event as Event)}
               >
                 <li>About us</li>
-              </Link>
-              <Link
+              </S.AnimatedLink>
+              <S.AnimatedLink
                 to="contact"
                 spy={true}
                 smooth={true}
                 onClick={() => handleNavigation(event as Event)}
               >
                 <li>Contact</li>
-              </Link>
+              </S.AnimatedLink>
             </S.DeskNavBar>
           ) : (
             <S.MenuBtn onClick={() => setShowNav((prev) => !prev)}>
@@ -381,6 +381,9 @@ export const Home = () => {
               <S.SocialImg src={InstaIcon} />
             </S.SocialBtn>
           </S.SocialContainer>
+          <p style={{ color: "rgba(255,255,255,0.3)", marginTop: 50 }}>
+            Copyright &copy; 2024 Notion Visual
+          </p>
         </S.GetInTouchContainer>
       </S.Container>
     </S.MainContainer>

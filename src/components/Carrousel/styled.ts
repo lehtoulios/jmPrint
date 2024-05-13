@@ -31,7 +31,7 @@ export const Img = styled.img`
   display: block;
   flex-shrink: 0;
   flex-grow: 0;
-  transition: translate 300ms ease-in-out;
+  transition: translate 500ms ease-in-out;
 `;
 
 export const SliderTextConatiner = styled.div`
@@ -42,7 +42,7 @@ export const SliderTextConatiner = styled.div`
   overflow: visible;
   position: absolute;
   transform: translateY(50%);
-  transition: translate 300ms ease-in-out;
+  transition: translate 500ms ease-in-out;
 `;
 
 export const SliderTextBackground = styled.div`
@@ -89,8 +89,10 @@ export const BtnPrevNext = styled.button`
   padding: 0 5px;
   position: absolute;
   top: 0;
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+  @media (min-width: 750px) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 `;
 

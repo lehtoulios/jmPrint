@@ -54,6 +54,7 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+
   h2 {
     font-family: ${({ theme }) => theme.FONTS[2]};
     font-size: clamp(1.125rem, 5vw, 3.75rem);
