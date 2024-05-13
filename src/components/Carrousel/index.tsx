@@ -72,9 +72,9 @@ export const Carrousel = ({ dataImage }: ImageSlidreProps) => {
         {dataImage.map((_, index) => {
           let selecionado;
           if (index == imageIndex) {
-            selecionado = true;
+            selecionado = 1;
           } else {
-            selecionado = false;
+            selecionado = 0;
           }
           return (
             <S.Contador

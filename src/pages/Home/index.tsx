@@ -9,7 +9,7 @@ import TumbUp from "../../assets/tumbUp.png";
 import Excellence from "../../assets/Excellence.png";
 import Happy from "../../assets/happy.png";
 import DeliveryVan from "../../assets/car.svg";
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import Mockup from "../../assets/Mockup.svg";
@@ -27,6 +27,7 @@ import Button from "../../components/Button";
 import { Carrousel } from "../../components/Carrousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -36,7 +37,7 @@ import { dataImage, cardImage, portfolioImage } from "../../utils/imageArray";
 
 export const Home = () => {
   const desktop = useMedia("(min-width: 750px)");
-  const [showNav, setSwoNav] = useState(false);
+  const [showNav, setShowNav] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -44,7 +45,7 @@ export const Home = () => {
 
   const form = useRef();
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setName("");
     setPhone("");
@@ -65,6 +66,11 @@ export const Home = () => {
       );
   };
 
+  const handleNavigation = (event: Event) => {
+    event.preventDefault();
+    setShowNav(false);
+  };
+
   return (
     <S.MainContainer>
       <S.Container>
@@ -72,37 +78,77 @@ export const Home = () => {
           <S.LogoImage src={logo} />
           {desktop ? (
             <S.DeskNavBar>
-              <a href="#services">
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                onClick={() => handleNavigation(event as Event)}
+              >
                 <li>Services</li>
-              </a>
-              <a href="#portifolio">
+              </Link>
+              <Link
+                to="portifolio"
+                spy={true}
+                smooth={true}
+                onClick={() => handleNavigation(event as Event)}
+              >
                 <li>Portfolio</li>
-              </a>
-              <a href="#about">
+              </Link>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                onClick={() => handleNavigation(event as Event)}
+              >
                 <li>About us</li>
-              </a>
-              <a href="#contatct">
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                onClick={() => handleNavigation(event as Event)}
+              >
                 <li>Contact</li>
-              </a>
+              </Link>
             </S.DeskNavBar>
           ) : (
-            <S.MenuBtn onClick={() => setSwoNav((prev) => !prev)}>
+            <S.MenuBtn onClick={() => setShowNav((prev) => !prev)}>
               <S.GiHamburgerMenuImg />
               {showNav && (
                 <S.NavContent>
                   <S.NatContentUl>
-                    <a href="#services">
+                    <Link
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      onClick={() => handleNavigation(event as Event)}
+                    >
                       <li>Services</li>
-                    </a>
-                    <a href="#portifolio">
+                    </Link>
+                    <Link
+                      to="portifolio"
+                      spy={true}
+                      smooth={true}
+                      onClick={() => handleNavigation(event as Event)}
+                    >
                       <li>Portfolio</li>
-                    </a>
-                    <a href="#about">
+                    </Link>
+                    <Link
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      onClick={() => handleNavigation(event as Event)}
+                    >
                       <li>About us</li>
-                    </a>
-                    <a href="#contatct">
+                    </Link>
+                    <Link
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      onClick={() => handleNavigation(event as Event)}
+                    >
                       <li>Contact</li>
-                    </a>
+                    </Link>
                   </S.NatContentUl>
                 </S.NavContent>
               )}
@@ -203,7 +249,7 @@ export const Home = () => {
         </S.WhyChooseContainer>
         {/* ########## Portfolio ############ */}
         <S.PortifolioContainer id="portifolio">
-          <S.PortifolioText>Portifolio</S.PortifolioText>
+          <S.PortifolioText>Portfolio</S.PortifolioText>
           <div style={{ width: "100%" }}>
             <Swiper
               effect={"coverflow"}

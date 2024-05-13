@@ -50,7 +50,7 @@ export default createGlobalStyle`
   a,
   a:visited {
     font-family: ${({ theme }) => theme.FONTS[0]};
-    color: ${({ theme }) => theme.COLORS.GRAY_LIGHT};
+    color: white;
     text-decoration: none;
   }
 

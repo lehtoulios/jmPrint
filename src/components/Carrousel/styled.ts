@@ -95,7 +95,7 @@ export const BtnPrevNext = styled.button`
 `;
 
 type contadorProps = {
-  selecionado: boolean;
+  selecionado: number;
 };
 
 export const Contador = styled.button<contadorProps>`
