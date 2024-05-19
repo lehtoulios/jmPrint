@@ -45,8 +45,8 @@ export const dataImage = [
 export const cardImage = [
   { id: "1", image: Card1, text: "Business card" },
   { id: "2", image: Card2, text: "Stickers/Labels" },
-  { id: "3", image: Card3, text: "Vehicle Graphic" },
-  { id: "4", image: Card4, text: "Flyers" },
+  { id: "3", image: Card3, text: "Flyers" },
+  { id: "4", image: Card4, text: "Vehicle Graphic" },
   { id: "5", image: Card5, text: "Shirts" },
   { id: "6", image: Card6, text: "Mugs" },
   { id: "7", image: Card7, text: "Keyrings" },

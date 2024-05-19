@@ -42,6 +42,8 @@ export const Home = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showModal, setShowModal] = useState("");
+  const [portfolioIndex, setPortfolioIndex] = useState(0);
 
   const form = useRef();
 
@@ -69,6 +71,11 @@ export const Home = () => {
   const handleNavigation = (event: Event) => {
     event.preventDefault();
     setShowNav(false);
+  };
+
+  const handleModalOpen = (index: number) => {
+    setShowModal("show");
+    setPortfolioIndex(index);
   };
 
   return (
@@ -272,11 +279,19 @@ export const Home = () => {
             >
               {portfolioImage.map((img, index) => (
                 <SwiperSlide key={index.toString()}>
-                  <img src={img.image} alt="slide_image" />
+                  <S.ImageModalImg onClick={() => handleModalOpen(index)}>
+                    <img src={img.image} alt="slide_image" />
+                  </S.ImageModalImg>
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
+          <S.PortfolioModal showmodal={showModal}>
+            <S.ModalImage src={portfolioImage[portfolioIndex].image} />
+            <S.ModalCloseButton
+              onClick={() => setShowModal("")}
+            ></S.ModalCloseButton>
+          </S.PortfolioModal>
         </S.PortifolioContainer>
         {/* ########## About us ############ */}
         <S.AboutContainer id="about">

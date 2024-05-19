@@ -419,6 +419,43 @@ export const PortifolioContainer = styled.div`
     padding: 50px 50px 0px;
   }
 `;
+type ImgModalShow = {
+  showmodal: string;
+};
+export const PortfolioModal = styled.div<ImgModalShow>`
+  position: absolute;
+  display: ${({ showmodal }) => (showmodal == "show" ? "flex" : "none")};
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+`;
+
+export const ImageModalImg = styled.button`
+  all: unset;
+`;
+
+export const ModalImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  @media (min-width: 800px) {
+    width: 70%;
+  }
+  @media (min-width: 1200px) {
+    width: 45%;
+  }
+`;
+export const ModalCloseButton = styled.button`
+  all: unset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+`;
 
 export const PortifolioCarrocelImgContainer = styled.div``;
 
