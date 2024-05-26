@@ -68,7 +68,7 @@ export const ImgWrapper = styled.div`
         
     }
     @media (min-width: 1000px) {
-        width:700px;
+        width:610px;
         height: 95vh;
     }
 
