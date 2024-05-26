@@ -86,7 +86,7 @@ export const ModalImage = styled.img`
         
     }
     @media (min-width: 1000px) {
-        width:585px;
+        width:600px;
         height: 93vh;
     }
 
