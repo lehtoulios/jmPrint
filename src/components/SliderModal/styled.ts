@@ -62,7 +62,7 @@ export const ImgWrapper = styled.div`
     &::-webkit-scrollbar {
   display: none;
 }
-    @media (min-width: 600px) {
+    @media (min-width: 500px) {
         width: 460px;
         height: 75vh;
         
