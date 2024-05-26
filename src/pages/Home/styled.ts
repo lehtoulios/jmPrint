@@ -3,6 +3,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import background from "../../assets/BrickBackground.png";
 import backgroundJm from "../../assets/jml_brazilian.png";
 import vanBackground from "../../assets/vanBranca.png";
+import Print from "../../assets/Print.svg";
+import Design from "../../assets/Design.svg";
+import Signage from "../../assets/Signage.svg";
+import Copy from "../../assets/Copy.svg";
 import { Link } from "react-scroll";
 
 export const MainContainer = styled.section`
@@ -266,6 +270,8 @@ export const WeDeliverImgContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+gap: 15px;
   width: 100%;
 `;
 
@@ -293,11 +299,66 @@ export const boxImg = styled.img`
 export const WeDeliverTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100px;
+  margin-bottom: 50px;
 `;
+export const WeDeliverCardContainer = styled.div`
+border: 3px solid green;
+border-radius: 10px ;
+background-color: rgba(0,0,0,0.3);
+padding: 10px;
+margin: 10px 0;
+  max-width: 500px;
+    @media (min-width: 550px) {
+    height: 275px;
+  }
+`
+export const SvgContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  `
+
+export const SvgTitle = styled.h1`
+font-size: 50px;
+color: white;
+@media (min-width: 750px) {
+  font-size: 80px;
+}
+
+`
+
+export const BotttomContainer = styled.div`
+margin-top: 30px;
+@media (min-width: 750px) {
+    margin-top: 100px;
+  }
+`
+
+export const TitleDot = styled.span`
+color: ${({theme})=> theme.COLORS.GREEN};
+`
+
+export const WeDeliverText = styled.p`
+color: white;
+font-size: 18px;
+line-height: 35px;
+margin-top: 15px;
+@media (min-width: 750px) {
+    font-size: 20px;
+  }
+`
+
+export const PringSVG = styled.img`
+color: red;
+fill: red;
+
+`
+
+
+
 export const WedeliverText = styled.h1`
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: inline-block;
   height: fit-content;
   text-align: center;
@@ -534,13 +595,13 @@ export const AboutImgContainer = styled.div`
 `;
 
 export const AboutText = styled.p`
-  padding: 20px;
+  padding: 10px;
   text-align: justify;
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
   @media (min-width: 800px) {
     font-size: 24px;
     line-height: 40px;
-    padding: 60px;
+    padding: 30px;
   }
 `;
 

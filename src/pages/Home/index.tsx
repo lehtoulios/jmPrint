@@ -20,6 +20,10 @@ import Layer_3 from "../../assets/Layer_3.svg";
 import WhatsIcon from "../../assets/WhatsIcon.svg";
 import InstaIcon from "../../assets/InstaIcon.svg";
 import btnLeft from "../../assets/arrow1.svg";
+import Print from "../../assets/Print.svg";
+import Design from "../../assets/Design.svg";
+import Signage from "../../assets/Signage.svg";
+import Copy from "../../assets/Copy.svg";
 import btnRight from "../../assets/arrow2.svg";
 
 import * as S from "./styled";
@@ -34,6 +38,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { dataImage, cardImage, portfolioImage } from "../../utils/imageArray";
+import { SliderModal } from "../../components/SliderModal";
 
 export const Home = () => {
   const desktop = useMedia("(min-width: 750px)");
@@ -210,20 +215,49 @@ export const Home = () => {
             </Swiper>
           </S.CarroucelServicesContainer>
         </S.SliderCardImgContainer>
-        {/* ########## We Deliver ############ */}
+        {/* ########## What we do. ############ */}
         <S.WeDeliverContainer>
           <S.WeDeliverTextContainer>
-            <S.WedeliverText>We Deliver</S.WedeliverText>
-            <S.WedeliverText2>to all EUROPE</S.WedeliverText2>
+            <S.WedeliverText>What we do.</S.WedeliverText>
           </S.WeDeliverTextContainer>
+       
           <S.WeDeliverImgContainer>
-            <S.vanImg src={DeliveryVan} />
-            <S.boxImg src={Caixas} />
+            <S.WeDeliverCardContainer>
+              <S.SvgContainer>
+                <S.SvgTitle>Print<S.TitleDot>.</S.TitleDot></S.SvgTitle>
+                <S.PringSVG src={Print} alt="Print Icon" />
+              </S.SvgContainer>
+              <S.WeDeliverText>Digital printing, we are able to meet all your needs with printing from business cards, flyers, posters and large format printing.</S.WeDeliverText>
+            </S.WeDeliverCardContainer>
+            <S.WeDeliverCardContainer>
+              <S.SvgContainer>
+                <S.SvgTitle>Design<S.TitleDot>.</S.TitleDot></S.SvgTitle>
+                <S.PringSVG src={Design} alt="Print Icon" />
+              </S.SvgContainer>
+              <S.WeDeliverText>Let us create and transform your ideas and bring them to life. Our design team always seeks to present the best for you!</S.WeDeliverText>
+            </S.WeDeliverCardContainer>
+            <S.WeDeliverCardContainer>
+              <S.SvgContainer>
+                <S.SvgTitle>Signage<S.TitleDot>.</S.TitleDot></S.SvgTitle>
+                <S.PringSVG src={Signage} alt="Print Icon" />
+              </S.SvgContainer>
+              <S.WeDeliverText>We develop, manufacture and install custom signage, for internal or external use. In addition to developing and installing customization in your vehicle, be it a car or van.</S.WeDeliverText>
+            </S.WeDeliverCardContainer>
+            <S.WeDeliverCardContainer >
+              <S.SvgContainer>
+                <S.SvgTitle>Copy<S.TitleDot>.</S.TitleDot></S.SvgTitle>
+                <S.PringSVG src={Copy} alt="Print Icon" />
+              </S.SvgContainer>
+              <S.WeDeliverText>At JM print & Sign we offer copying, laminating and binding services, with fair prices and quality service.</S.WeDeliverText>
+            </S.WeDeliverCardContainer>
           </S.WeDeliverImgContainer>
+          <S.BotttomContainer>
+
           <Button
             refLink="https://wa.me/3530874317979"
             text={"Make an order"}
-          />
+            />
+            </S.BotttomContainer>
         </S.WeDeliverContainer>
         {/* ########## Why to choose us? ############ */}
         <S.WhyChooseContainer>
@@ -286,12 +320,7 @@ export const Home = () => {
               ))}
             </Swiper>
           </div>
-          <S.PortfolioModal showmodal={showModal}>
-            <S.ModalImage src={portfolioImage[portfolioIndex].image} />
-            <S.ModalCloseButton
-              onClick={() => setShowModal("")}
-            ></S.ModalCloseButton>
-          </S.PortfolioModal>
+          <SliderModal showModal={showModal} portfolioIndex={portfolioIndex} portfolioImage={portfolioImage} setShowModal={setShowModal} />;
         </S.PortifolioContainer>
         {/* ########## About us ############ */}
         <S.AboutContainer id="about">
@@ -308,11 +337,9 @@ export const Home = () => {
               materials.
             </S.AboutText>
             <S.AboutText>
-              For those who ask who are the faces behind JM Print & Sign, here
-              we are, we are a Brazilian company, which has been in the market
-              for 5 years and focused entirely on the graphics sector for 2
-              years, always seeking to improve and bring quality to our
-              materials.
+              The company was created in 2019 by a Brazilian couple passionate about the graphic world and entrepreneurship, thus creating JM Print & Sign.
+              Offers printing, copying, lamination, binding and graphic design and large format printing, business cards, flyers, signs, vehicle graphics, T-shirts, promotional products and much more.
+              Located in Gort, today its mission is to offer Quality Service, Printing, Agility and graphic solutions for its customers, from the designer to the printing and installation of their materials.
             </S.AboutText>
           </div>
         </S.AboutContainer>
