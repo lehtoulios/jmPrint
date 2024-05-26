@@ -328,7 +328,7 @@ color: white;
 `
 
 export const BotttomContainer = styled.div`
-margin-top: 30px;
+margin: 30px 0;
 @media (min-width: 750px) {
     margin-top: 100px;
   }
