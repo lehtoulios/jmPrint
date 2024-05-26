@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { IoMdCloseCircleOutline } from "react-icons/io";
 
 import * as S from "./styled";
 import arrow1 from "../../assets/arrow1.svg";
@@ -21,25 +20,16 @@ interface SliderModalProps {
 
 export const SliderModal: React.FC<SliderModalProps> = ({ showModal, portfolioIndex, portfolioImage, setShowModal }) => {
     const [imageIndex, setImageIndex] = useState<number>(0)
-    const [buffer, setBuffer] = useState(false);
     useEffect(() => {
         setImageIndex(portfolioIndex)
     },[portfolioIndex])
     function shoNextImagge() {
-        setBuffer(true);
-        setInterval(() => {
-          setBuffer(false);
-        }, 5000);
         setImageIndex((index: any) => {
           if (index === portfolioImage.length - 1) return 0;
           return index + 1;
         });
       }
       function shoPrevImagge() {
-        setBuffer(true);
-        setInterval(() => {
-          setBuffer(false);
-        }, 5000);
         setImageIndex((index: any) => {
           if (index === 0) return portfolioImage.length - 1;
           return index - 1;
