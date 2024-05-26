@@ -55,7 +55,7 @@ export const BtnPrevNext = styled.button`
 export const ImgWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    height: 90vh;
+    height: 75vh;
     overflow-y: hidden;
     width: 90%;
     transition: translate 400ms ease-in-out;
