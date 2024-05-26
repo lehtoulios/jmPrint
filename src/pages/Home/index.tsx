@@ -4,11 +4,9 @@ import { register } from "swiper/element/bundle";
 register();
 // @ts-ignore
 import useMedia from "../../hooks/useMedia";
-import Caixas from "../../assets/Caixas.png";
 import TumbUp from "../../assets/tumbUp.png";
 import Excellence from "../../assets/Excellence.png";
 import Happy from "../../assets/happy.png";
-import DeliveryVan from "../../assets/car.svg";
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
