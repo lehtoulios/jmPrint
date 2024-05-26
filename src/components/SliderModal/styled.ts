@@ -80,7 +80,15 @@ export const ModalImage = styled.img`
   border-radius: 10px;
   object-fit: cover;
   transition: translate 500ms ease-in-out;
-
+    @media (min-width: 600px) {
+        width: 460px;
+        height: 75vh;
+        
+    }
+    @media (min-width: 1000px) {
+        width:585px;
+        height: 93vh;
+    }
 
 `;
 
