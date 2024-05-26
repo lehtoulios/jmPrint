@@ -3,10 +3,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import background from "../../assets/BrickBackground.png";
 import backgroundJm from "../../assets/jml_brazilian.png";
 import vanBackground from "../../assets/vanBranca.png";
-import Print from "../../assets/Print.svg";
-import Design from "../../assets/Design.svg";
-import Signage from "../../assets/Signage.svg";
-import Copy from "../../assets/Copy.svg";
 import { Link } from "react-scroll";
 
 export const MainContainer = styled.section`
