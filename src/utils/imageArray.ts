@@ -82,7 +82,6 @@ import Portifolio78Portfolio from "../assets/Portifolio78Portfolio.png";
 import Portifolio79Portfolio from "../assets/Portifolio79Portfolio.png";
 import Portifolio80Portfolio from "../assets/Portifolio80Portfolio.png";
 import Services1 from "../assets/Services1.png";
-import Services2 from "../assets/Services2.png";
 import Services3 from "../assets/Services3.png";
 import Services4 from "../assets/Services4.png";
 import Services5 from "../assets/Services5.png";
