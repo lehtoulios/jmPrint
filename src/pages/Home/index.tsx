@@ -1,4 +1,4 @@
-import logo from "../../assets/Logo.svg";
+import logo from "../../assets/logoJm1.png";
 import { register } from "swiper/element/bundle";
 
 register();
@@ -23,10 +23,10 @@ import Design from "../../assets/Design.svg";
 import Signage from "../../assets/Signage.svg";
 import Copy from "../../assets/Copy.svg";
 import btnRight from "../../assets/arrow2.svg";
+import Bandeiras from "../../assets/bandeiras.png";
 
 import * as S from "./styled";
 import Button from "../../components/Button";
-import { Carrousel } from "../../components/Carrousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-scroll";
@@ -35,8 +35,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { dataImage, cardImage, portfolioImage } from "../../utils/imageArray";
+import { cardImage, portfolioImage } from "../../utils/imageArray";
 import { SliderModal } from "../../components/SliderModal";
+import Topimage from '../../assets/Banner_site.png'
 
 export const Home = () => {
   const desktop = useMedia("(min-width: 750px)");
@@ -168,7 +169,7 @@ export const Home = () => {
 
         {/* ########## Image Carroucel ############ */}
         <S.CarrocelImgContainer>
-          <Carrousel dataImage={dataImage} />
+          <S.ImageTop src={Topimage}/>
         </S.CarrocelImgContainer>
         {/* ########## Services ############ */}
         <S.SliderCardImgContainer id="services">
@@ -354,28 +355,45 @@ export const Home = () => {
         </S.FollowContainer>
         {/* ########## Get in touch ############ */}
         <S.GetInTouchContainer id="contact">
+
           <S.GetInTouchHeaderText>Get in touch</S.GetInTouchHeaderText>
-          <S.GetInTouchCardContainer>
-            <S.GetInTouchCardSVG src={Layer_3} />
-            <S.GetInTouchCardText>Phone</S.GetInTouchCardText>
-            <S.GetInTouchCardText>+353 (87) 431 7979</S.GetInTouchCardText>
-            <S.GetInTouchCardLine />
-          </S.GetInTouchCardContainer>
-          <S.GetInTouchCardContainer>
-            <S.GetInTouchCardSVG src={Layer_1} />
-            <S.GetInTouchCardText>
-              Montana house, Bridge Street - Gort
-            </S.GetInTouchCardText>
-            <S.GetInTouchCardText>co. Galway</S.GetInTouchCardText>
-            <S.GetInTouchCardText>H91F6W6</S.GetInTouchCardText>
-            <S.GetInTouchCardLine />
-          </S.GetInTouchCardContainer>
-          <S.GetInTouchCardContainer style={{ marginBottom: 50 }}>
-            <S.GetInTouchCardSVG src={Layer_2} />
-            <S.GetInTouchCardText>Email</S.GetInTouchCardText>
-            <S.GetInTouchCardText>jmprintesign@gmail.com</S.GetInTouchCardText>
-            <S.GetInTouchCardLine />
-          </S.GetInTouchCardContainer>
+          <S.InfoWrapper>
+                      <S.FooterInfoContainer>
+                      <S.GetInTouchCardContainer>
+                          <S.GetInTouchCardSVG src={Layer_3} />
+                          <S.GetInTouchCardText>Phone</S.GetInTouchCardText>
+                          <S.GetInTouchCardText>+353 (87) 431 7979</S.GetInTouchCardText>
+                          <S.GetInTouchCardLine />
+                        </S.GetInTouchCardContainer>
+                        <S.GetInTouchCardContainer>
+                          <S.GetInTouchCardSVG src={Layer_1} />
+                          <S.GetInTouchCardText>
+                            Montana house, Bridge Street - Gort
+                          </S.GetInTouchCardText>
+                          <S.GetInTouchCardText>co. Galway</S.GetInTouchCardText>
+                          <S.GetInTouchCardText>H91F6W6</S.GetInTouchCardText>
+                          <S.GetInTouchCardLine />
+                        </S.GetInTouchCardContainer>
+                        <S.GetInTouchCardContainer style={{ marginBottom: 50 }}>
+                          <S.GetInTouchCardSVG src={Layer_2} />
+                          <S.GetInTouchCardText>Email</S.GetInTouchCardText>
+                          <S.GetInTouchCardText>jmprintesign@gmail.com</S.GetInTouchCardText>
+                          <S.GetInTouchCardLine />
+                        </S.GetInTouchCardContainer>
+                      </S.FooterInfoContainer>
+                      <S.FooterInfoContainer>
+                        <S.GetInTouchCardContainer style={{marginBottom: 50}}>
+                          <S.BandeiraImg src={Bandeiras} />
+                          <S.GetInTouchCardText>Opening hours:</S.GetInTouchCardText>
+                          <S.GetInTouchCardText>Monday</S.GetInTouchCardText>
+                          <S.GetInTouchCardText style={{fontStyle: "italic"}}>9:30am to 3:00pm </S.GetInTouchCardText>
+                          <S.GetInTouchCardText>Tuesday to Friday </S.GetInTouchCardText>
+                          <S.GetInTouchCardText style={{fontStyle: "italic"}}>9:30am to 5:30pm</S.GetInTouchCardText>
+                          <S.GetInTouchCardText>Saturday</S.GetInTouchCardText>
+                          <S.GetInTouchCardText style={{fontStyle: "italic"}}>9:30am to 3:00pm</S.GetInTouchCardText>
+                  </S.GetInTouchCardContainer>
+              </S.FooterInfoContainer>
+          </S.InfoWrapper>
           <S.GetInTouchText>If you got any questions</S.GetInTouchText>
           <S.GetInTouchText>
             Please do not hesitate to send us a message

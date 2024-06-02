@@ -20,9 +20,11 @@ interface SliderModalProps {
 
 export const SliderModal: React.FC<SliderModalProps> = ({ showModal, portfolioIndex, portfolioImage, setShowModal }) => {
     const [imageIndex, setImageIndex] = useState<number>(0)
+    let offset: number = Math.ceil(portfolioImage.length / 2) - .5
     useEffect(() => {
-        setImageIndex(portfolioIndex)
-    },[portfolioIndex])
+        setImageIndex(portfolioIndex - offset)
+      },[portfolioIndex])
+      console.log(imageIndex);
     function shoNextImagge() {
         setImageIndex((index: any) => {
           if (index === portfolioImage.length - 1) return 0;
@@ -35,6 +37,7 @@ export const SliderModal: React.FC<SliderModalProps> = ({ showModal, portfolioIn
           return index - 1;
         });
       }
+      
   return (
     <S.PortfolioModal showmodal={showModal}>
         <S.BtnPrevNext onClick={shoPrevImagge} style={{left: 0}}>
@@ -46,7 +49,9 @@ export const SliderModal: React.FC<SliderModalProps> = ({ showModal, portfolioIn
         <S.ImgWrapper>
         {portfolioImage.map((img) => {
             return(
-                <S.ModalImage src={img.image} style={{ translate: `${-100 * imageIndex}%` }}/>
+              <S.ImageContainer style={{ translate: `${-100 * imageIndex}%` }}>
+                <S.ModalImage src={img.image}/>
+              </S.ImageContainer >
             )
         })}
         </S.ImgWrapper>

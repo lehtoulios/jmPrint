@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import background from "../../assets/BrickBackground.png";
 import backgroundJm from "../../assets/jml_brazilian.png";
-import vanBackground from "../../assets/vanBranca.png";
+import vanBackground from "../../assets/Mini_van.png";
 import { Link } from "react-scroll";
 
 export const MainContainer = styled.section`
@@ -41,14 +41,10 @@ export const AnimatedLink = styled(Link)`
 export const NavBar = styled.nav`
   display: flex;
   width: 100%;
-  min-height: 100px;
-  padding: 0 40px;
+  padding: 20px 40px;
   align-items: center;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.COLORS.BLACK};
-  height: 15vw;
-  max-height: 190px;
-  min-height: 100px;
 `;
 export const DeskNavBar = styled.ul`
   width: 100%;
@@ -64,10 +60,10 @@ export const DeskNavBar = styled.ul`
 `;
 
 export const LogoImage = styled.img`
-  width: 7vw;
-  aspect-ratio: 1;
+  width: 40vw;
+  aspect-ratio: 2;
   min-width: 50px;
-  max-width: 100px;
+  max-width: 200px;
 `;
 
 export const MenuBtn = styled.button`
@@ -130,10 +126,13 @@ export const CarrocelImgContainer = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 65vw;
-  min-height: 210px;
   max-height: 900px;
 `;
+
+export const ImageTop = styled.img`
+width: 100%;
+object-fit: cover;
+`
 
 export const CarrouselTextContainer = styled.div`
   position: absolute;
@@ -374,19 +373,18 @@ export const WedeliverText2 = styled.h1`
 `;
 
 export const WhyChooseContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
   width: 100%;
-  display: flex;
   background-color: ${({ theme }) => theme.COLORS.FONT_COLOR_BLACK};
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 20px;
   height: 65vw;
   max-height: 900px;
   min-height: 740px;
   @media (min-width: 900px) {
     background-image: url(${vanBackground});
-    background-size: fill;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -405,7 +403,7 @@ export const WhyChooseCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   width: 55%;
   min-width: 170px;
   max-width: 350px;
@@ -413,6 +411,7 @@ export const WhyChooseCardContainer = styled.div`
 
 export const WhyChooseText = styled.h3`
   font-size: 24px;
+  margin: 20px 0 50px;
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
   position: relative;
   z-index: 2;
@@ -439,6 +438,8 @@ export const WhyChooseText = styled.h3`
     z-index: -1;
   }
   @media (min-width: 600px) {
+  margin: 20px 0 150px;
+
     &:after {
       content: "";
       width: 60px;
@@ -705,6 +706,22 @@ export const GetInTouchContainer = styled.div`
   }
 `;
 
+export const FooterInfoContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+`
+
+export const InfoWrapper = styled.div`
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+width: 70%;
+
+
+`
+
 export const GetInTouchHeaderText = styled.h3`
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
   position: relative;
@@ -764,8 +781,14 @@ export const GetInTouchCardContainer = styled.div`
   min-width: 230px;
 `;
 export const GetInTouchCardSVG = styled.img``;
+export const BandeiraImg = styled.img`
+width: 100px;
+height: 80px;
+
+`;
 export const GetInTouchCardText = styled.p`
   color: ${({ theme }) => theme.COLORS.FONT_COLOR_WHITE};
+  max-width: 300px;
   text-align: center;
 `;
 
