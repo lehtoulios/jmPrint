@@ -429,19 +429,19 @@ export const Home = () => {
           </S.GetInTouchForm>
           <S.GetInTouchCardLine />
           <S.SocialContainer>
-            <S.SocialBtn href="https://wa.me/3530874317979" target="_blanck">
+            <S.SocialBtn href="https://wa.me/3530874317979" target="_blank">
               <S.SocialImg src={WhatsIcon} />
             </S.SocialBtn>
             <S.SocialBtn
               href="https://www.instagram.com/jmprintesign/"
-              target="_blanck"
+              target="_blank"
             >
               <S.SocialImg src={InstaIcon} />
             </S.SocialBtn>
           </S.SocialContainer>
-          <p style={{ color: "rgba(255,255,255,0.3)", marginTop: 50 }}>
+          <a href="https://www.instagram.com/notionvisualmkt?igsh=MTEzem13NTl0amxvag==" target="_blank" style={{ color: "rgba(255,255,255,0.3)", marginTop: 50 }} >
             Copyright &copy; 2024 Notion Visual
-          </p>
+          </a>
         </S.GetInTouchContainer>
       </S.Container>
     </S.MainContainer>

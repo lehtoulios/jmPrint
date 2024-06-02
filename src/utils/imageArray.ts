@@ -85,18 +85,18 @@ import Services1 from "../assets/Services1.png";
 import Services3 from "../assets/Services3.png";
 import Services4 from "../assets/Services4.png";
 import Services5 from "../assets/Services5.png";
-import Services6 from "../assets/Services6.png";
+import Services6 from "../assets/Services6.jpg";
 import Services7 from "../assets/Services7.png";
-import Services8 from "../assets/Services8.png";
+import Services8 from "../assets/Services8.jpg";
 import Services9 from "../assets/Services9.png";
 import Services10 from "../assets/Services10.png";
 import Services11 from "../assets/Services11.png";
 import Services12 from "../assets/Services12.png";
 import Services13 from "../assets/Services13.png";
-import Services14 from "../assets/Services14.png";
-import Services15 from "../assets/Services15.png";
+import Services14 from "../assets/Services14.jpg";
+import Services15 from "../assets/Services15.jpg";
 import Services16 from "../assets/Services16.png";
-import Services17 from "../assets/Services17.png";
+import Services17 from "../assets/Services17.jpg";
 
 
 
@@ -114,7 +114,7 @@ export const dataImage = [
 
 export const cardImage = [
   { id: "1", image: Services1, text: "Window Graphic" },
-  { id: "3", image: Services3, text: "Banners" },
+  { id: "3", image: Services3, text: "Roll Up Banners" },
   { id: "4", image: Services4, text: "Personilized Mugs" },
   { id: "5", image: Services5, text: "Heats" },
   { id: "6", image: Services6, text: "Car Graphics" },
@@ -127,7 +127,7 @@ export const cardImage = [
   { id: "13", image: Services13, text: "Van Graphics" },
   { id: "14", image: Services14, text: "Pavement Signs" },
   { id: "15", image: Services15, text: "Printed T-shirt" },
-  { id: "16", image: Services16, text: "Roll Up Banners" },
+  { id: "16", image: Services16, text: "Banners" },
   { id: "17", image: Services17, text: "Stickers" },
 ];
 
