@@ -217,7 +217,7 @@ export const Home = () => {
         {/* ########## What we do. ############ */}
         <S.WeDeliverContainer>
           <S.WeDeliverTextContainer>
-            <S.WedeliverText>What we do.</S.WedeliverText>
+            <S.CardServicesText>What we do.</S.CardServicesText>
           </S.WeDeliverTextContainer>
        
           <S.WeDeliverImgContainer>

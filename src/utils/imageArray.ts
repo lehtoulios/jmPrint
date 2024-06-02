@@ -125,9 +125,9 @@ export const cardImage = [
   { id: "11", image: Services11, text: "Posters" },
   { id: "12", image: Services12, text: "Foamboards" },
   { id: "13", image: Services13, text: "Van Graphics" },
-  { id: "14", image: Services14, text: "Pavment Signs" },
+  { id: "14", image: Services14, text: "Pavement Signs" },
   { id: "15", image: Services15, text: "Printed T-shirt" },
-  { id: "16", image: Services16, text: "Bunners" },
+  { id: "16", image: Services16, text: "Banners" },
   { id: "17", image: Services17, text: "Stickers" },
 ];
 
